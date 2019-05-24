@@ -143,6 +143,10 @@ a {
 
 /* TODO 3 */
 .main-block {
+  .main-block {
+    max-width: 1200px;
+    margin: auto;
+  }
   /* Restrict the maximum width of the .main-block to 1200px,
   then ensure that block is centered within the layout */
   /* Hint: how do you center a block element? */
@@ -163,12 +167,12 @@ a {
 
 .grading {
   background-color: antiquewhite;
-  overflow: hidden;
+
 }
 
 .topics {
   background-color: lightgoldenrodyellow;
-  overflow: hidden;
+
 }
 
 .lessons-grid {
@@ -213,11 +217,14 @@ a {
   .lessons-grid {
     display: grid;
     /* TODO 1 */
+    grid-template-columns: 1fr 1fr;
     /* 2 column template! (1 fraction each) */
     /* Use this as a reminder of the syntax:
       https://codepen.io/roccop/pen/WLQJXY?editors=1100
     */
     /* TODO 5 */
+    grid-gap: 1em;
+    margin: 0;
     /* set a grid-gap of 1em 
     and make sure to remove the margin on each .lesson
     to get an evenly spaced layout. */
@@ -247,8 +254,31 @@ a {
   .lessons-grid {
     /* TODO 2 */
     /* 4 column template! (1 fraction each) */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .main-block {
+    width: 880px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
   }
 
+  .main-header {
+    grid-column: 1 / 3;
+  }
+
+  .lessons {
+    grid-column: 1 / 3;
+  }
+
+  .lessons-grid {
+    /* TODO 2 */
+    /* 4 column template! (1 fraction each) */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  }
   /* TODO 4 */
   /* turn .main-block into a grid with the following template: */
   /* ---------------------------
